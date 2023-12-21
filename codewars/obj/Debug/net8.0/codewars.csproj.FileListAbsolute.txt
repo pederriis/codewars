@@ -1,0 +1,14 @@
+C:\Users\Peder\source\repos\codewars\codewars\bin\Debug\net8.0\codewars.exe
+C:\Users\Peder\source\repos\codewars\codewars\bin\Debug\net8.0\codewars.deps.json
+C:\Users\Peder\source\repos\codewars\codewars\bin\Debug\net8.0\codewars.runtimeconfig.json
+C:\Users\Peder\source\repos\codewars\codewars\bin\Debug\net8.0\codewars.dll
+C:\Users\Peder\source\repos\codewars\codewars\bin\Debug\net8.0\codewars.pdb
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.AssemblyInfoInputs.cache
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.AssemblyInfo.cs
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.csproj.CoreCompileInputs.cache
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.dll
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\refint\codewars.dll
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.pdb
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.genruntimeconfig.cache
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\ref\codewars.dll
