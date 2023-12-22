@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("codewars")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14215f0178d76ab5324e60f48d06b14955104092")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c017ba18d80fc9760bc4aa513473d458038138f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("codewars")]
 [assembly: System.Reflection.AssemblyTitleAttribute("codewars")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

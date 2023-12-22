@@ -11,11 +11,16 @@ namespace codewars
 
         public static void Run()
         {
-            CukooClock();
+            RunClockymcClockface();
         }
        public static void CukooClock()
         {
            Console.WriteLine("final " + CuckooClockSolution.CuckooClock("12:59", 10));
+        }
+
+        public static void RunClockymcClockface()
+        {
+            Console.WriteLine("Final " + ClockymcClockface.WhatTimeIsIt(2));
         }
     }
 }
