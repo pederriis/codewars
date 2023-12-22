@@ -12,3 +12,4 @@ C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\refint\codewars.d
 C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.pdb
 C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.genruntimeconfig.cache
 C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\ref\codewars.dll
+C:\Users\Peder\source\repos\codewars\codewars\obj\Debug\net8.0\codewars.sourcelink.json

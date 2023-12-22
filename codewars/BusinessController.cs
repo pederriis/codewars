@@ -15,7 +15,7 @@ namespace codewars
         }
        public static void CukooClock()
         {
-           Console.WriteLine("final " + CuckooClockSolution.CuckooClock("10:00", 10));
+           Console.WriteLine("final " + CuckooClockSolution.CuckooClock("12:59", 10));
         }
     }
 }

@@ -12,29 +12,38 @@ namespace codewars
         {
             var parsedTime = DateTime.Parse(inputTime);
 
-
-            for (int i = chimes-1; i > 0; i--)
+            while (chimes >0)
             {
-                int currentMinuts = short.Parse(parsedTime.ToString("mm"));
 
-                if (currentMinuts % 15 == 0 && currentMinuts != 0)
                 {
-                    chimes--;
-                    Console.WriteLine(parsedTime.ToString("HH:mm"));
-                    Console.WriteLine("Current chimes " + chimes);
+                    int currentMinuts = short.Parse(parsedTime.ToString("mm"));
+
+                    if (currentMinuts % 15 == 0 && currentMinuts != 0)
+                    {
+                        chimes--;
+                     
+                    }
+
+                    else if (currentMinuts == 0)
+                    {
+                        chimes = chimes - short.Parse(parsedTime.ToString("hh"));
+
+                        if (chimes>0)
+                        {
+                        parsedTime = parsedTime.AddMinutes(15);
+
+                        }
+
+                    }
+                    if (chimes > 0 && currentMinuts != 0)
+                    {
+                        parsedTime = parsedTime.AddMinutes(1);
+
+                    }
 
                 }
-                else if (currentMinuts == 0)
-                {
-                    chimes = chimes - short.Parse(parsedTime.ToString("HH"));
-                    Console.WriteLine(parsedTime.ToString("HH:mm"));
-                    Console.WriteLine("Current chimes " + chimes);
-                }
-                parsedTime = parsedTime.AddMinutes(1);
-
             }
-            
-            return parsedTime.ToString("HH:mm");
+            return parsedTime.ToString("hh:mm");
         }
 
     }
