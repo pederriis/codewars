@@ -11,7 +11,7 @@ namespace codewars
 
         public static void Run()
         {
-            RunClockymcClockface();
+            runPancakeFlip();
         }
        public static void CukooClock()
         {
@@ -21,6 +21,13 @@ namespace codewars
         public static void RunClockymcClockface()
         {
             Console.WriteLine("Final " + ClockymcClockface.WhatTimeIsIt(2));
+        }
+
+        public static void runPancakeFlip()
+        {
+            List<int> pancakes = new List<int> { 1, 5, 8, 3 };
+
+            Console.WriteLine("Flips: " + PancakeFlip.FlipPancakes(pancakes));
         }
     }
 }
