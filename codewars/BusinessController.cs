@@ -25,7 +25,7 @@ namespace codewars
 
         public static void runPancakeFlip()
         {
-            List<int> pancakes = new List<int> { 1, 5, 8, 3 };
+            List<int> pancakes = new List<int> { 4, 1, 3, 2, 4, 6, 3, 9, 1 };
 
             Console.WriteLine("Flips: " + PancakeFlip.FlipPancakes(pancakes));
         }
