@@ -11,7 +11,7 @@ namespace codewars
 
         public static void Run()
         {
-            runPancakeFlip();
+            runFizHex();
         }
        public static void CukooClock()
         {
@@ -29,5 +29,11 @@ namespace codewars
 
             Console.WriteLine("Flips: " + PancakeFlip.FlipPancakes(pancakes));
         }
+    
+        public static void runFizHex()
+        {
+            Console.WriteLine(Howmuchisthefish.FisHex("puffers"));
+        }
+    
     }
 }
