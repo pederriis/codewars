@@ -10,14 +10,51 @@ namespace codewars
     {
         public static int FisHex(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+            { 
+                return 0; 
+            }
 
-            List<char> hexes= FindHex(name);
-            var ints=GetIntsFromHex(hexes);
-            var strings=GetBinaryFromInts(ints);
-            var output = XorBinary(strings);
+            string hexValues = "abcdef";
 
+            List<char> hexes = name.ToLower().Replace(" ","").Where(x => hexValues.Contains(x)).ToList();
 
-            return output;
+            if (hexes.Count <= 0) 
+            {
+                return 0;
+            }
+            
+            List<string> binaries = new List<string>();
+            
+            foreach (char c in hexes)
+            {
+                var value =Convert.ToString( Convert.ToInt32("0x" + c, 16),2);
+                binaries.Add(value);
+            }
+
+            string tempString = "";
+            string resultString = "";
+
+            for (int i = 1; i < binaries.Count; i++)
+            {
+                for (int j = 0; j < binaries[i].Length; j++)
+                {
+                    if (binaries[i][j] == binaries[i - 1][j])
+                    {
+                        tempString = tempString + "0";
+                    }
+                    else
+                    {
+                        tempString = tempString + "1";
+                    }
+                }
+                binaries[i] = tempString;
+                resultString = tempString;
+                tempString = "";
+
+            }
+
+            return Convert.ToInt32(resultString, 2);
         }
 
         public static List<char> FindHex(string name)
@@ -56,16 +93,16 @@ namespace codewars
             return output;
         }
 
-        public static int XorBinary(List<string> strings) 
+        public static int XorBinary(List<string> binaries) 
         {
             string tempString = "";
             string resultString="";
 
-            for (int i = 1; i < strings.Count; i++)
+            for (int i = 1; i < binaries.Count; i++)
             {
-                for (int j = 0; j < strings[i].Length; j++)
+                for (int j = 0; j < binaries[i].Length; j++)
                 {
-                    if (strings[i][j] == strings[i - 1][j])
+                    if (binaries[i][j] == binaries[i - 1][j])
                     {
                         tempString = tempString + "0";
                         }
@@ -74,7 +111,7 @@ namespace codewars
                         tempString = tempString + "1";
                     }
                 }
-                strings[i] = tempString;
+                binaries[i] = tempString;
                 resultString = tempString;
                 tempString = "";
                

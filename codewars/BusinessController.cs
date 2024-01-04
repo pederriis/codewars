@@ -32,7 +32,7 @@ namespace codewars
     
         public static void runFizHex()
         {
-            Console.WriteLine(Howmuchisthefish.FisHex("sugar toads"));
+            Console.WriteLine(Howmuchisthefish.FisHex("upo"));
         }
     
     }
