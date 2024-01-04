@@ -14,16 +14,17 @@ namespace codewars
             List<char> hexes= FindHex(name);
             var ints=GetIntsFromHex(hexes);
             var strings=GetBinaryFromInts(ints);
+            var output = XorBinary(strings);
 
 
-            return 0;
+            return output;
         }
 
         public static List<char> FindHex(string name)
         {
             string hexValues = "abcdef";
 
-            List<char> output = name.Where(x=>hexValues.Contains(x)).ToList();
+            List<char> output = name.ToLower().Where(x=>hexValues.Contains(x)).ToList();
 
 
             return output;
@@ -53,6 +54,32 @@ namespace codewars
                 output.Add(binary);
             }
             return output;
+        }
+
+        public static int XorBinary(List<string> strings) 
+        {
+            string tempString = "";
+            string resultString="";
+
+            for (int i = 1; i < strings.Count; i++)
+            {
+                for (int j = 0; j < strings[i].Length; j++)
+                {
+                    if (strings[i][j] == strings[i - 1][j])
+                    {
+                        tempString = tempString + "0";
+                        }
+                    else
+                    {
+                        tempString = tempString + "1";
+                    }
+                }
+                strings[i] = tempString;
+                resultString = tempString;
+                tempString = "";
+               
+            }
+            return Convert.ToInt32(resultString,2);
         }
     }
 }
