@@ -31,6 +31,10 @@ namespace codewars
                 var value =Convert.ToString( Convert.ToInt32("0x" + c, 16),2);
                 binaries.Add(value);
             }
+            if (binaries.Count==1)
+            {
+                return Convert.ToInt32(binaries[0],2);
+            }
 
             string tempString = "";
             string resultString = "";
