@@ -11,7 +11,7 @@ namespace codewars
 
         public static void Run()
         {
-            runFizHex();
+            runTriangle();
         }
        public static void CukooClock()
         {
@@ -33,6 +33,11 @@ namespace codewars
         public static void runFizHex()
         {
             Console.WriteLine(Howmuchisthefish.FisHex("f"));
+        }
+
+        public static void runTriangle()
+        {
+            Console.WriteLine(IsThisATriangle.IsTriangle(1, 2, 2));
         }
     
     }
