@@ -11,7 +11,7 @@ namespace codewars
 
         public static void Run()
         {
-            runTriangle();
+            runReadableDuration();
         }
        public static void CukooClock()
         {
@@ -39,6 +39,11 @@ namespace codewars
         {
             Console.WriteLine(IsThisATriangle.IsTriangle(1, 2, 2));
         }
-    
+
+        public static void runReadableDuration()
+        {
+            Console.WriteLine(ReadableDuration.formatDuration(132030240));
+        }
+
     }
 }
