@@ -42,7 +42,7 @@ namespace codewars
 
         public static void runReadableDuration()
         {
-            Console.WriteLine(ReadableDuration.formatDuration(132030240));
+            Console.WriteLine(ReadableDuration.formatDuration(120));
         }
 
     }

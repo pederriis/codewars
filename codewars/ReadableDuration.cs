@@ -10,57 +10,100 @@ namespace codewars
     {
         public static string formatDuration(int seconds)
         {
-            if (seconds <= 0) 
+            if (seconds <= 0)
             {
                 return "now";
             }
-            //Enter Code here
-            int years= seconds/31536000; 
-            int days = seconds%31536000/86400; 
+            if (seconds == 1)
+            {
+                return "1 second";
+            }
+            int years = seconds / 31536000;
+            int days = seconds % 31536000 / 86400;
 
-            int spillseconds = seconds % 31536000 % 86400; 
-            int hours = spillseconds / 60/60;
-            int minuts=spillseconds/ 60%60;
-            int finalseconds= spillseconds % 60 % 60;
+            int spillseconds = seconds % 31536000 % 86400;
+            int hours = spillseconds / 60 / 60;
+            int minutes = spillseconds / 60 % 60;
+            int finalseconds = spillseconds % 60 % 60;
 
             string yearString = years > 1 ? "years" : "year";
             string daysString = days > 1 ? "days" : "day";
             string hoursString = hours > 1 ? "hours" : "hour";
-            string minutsString = minuts > 1 ? "minuts": "minut";
+            string minutesString = minutes > 1 ? "minutes" : "minute";
             string secondsString = finalseconds > 1 ? "seconds" : "second";
 
             string output = "";
 
-            if (years > 0) 
-            
+            if (years > 0)
+
             {
-                output = years.ToString() + ", "+yearString;
+                seconds = seconds - years * 31536000;
+                output = $"{years} {yearString}";
             }
             if (days > 0)
 
             {
-                output = output +", "+days.ToString() + " " + daysString;
+                seconds = seconds - days * 86400;
+
+                if (seconds == 0 && output != "")
+                {
+                    output = output + $" and ";
+
+                }
+                else if (output != "")
+                {
+                    output = output + $", ";
+
+                }
+
+                output = output + $"{days} {daysString}";
             }
             if (hours > 0)
 
             {
-                output = output + ", " + hours.ToString() + " " + hoursString;
+                seconds = seconds - hours * 3600;
+
+
+                if (seconds == 0 && output != "")
+                {
+                    output = output + $" and ";
+
+                }
+
+                else if (output != "")
+                {
+                    output = output + $", ";
+
+                }
+
+                output = output + $"{hours} {hoursString}";
             }
-            if (minuts > 0)
+            if (minutes > 0)
 
             {
-                output = seconds>0?output + " and " + minuts.ToString() + " " + minutsString:
-                    output + ", " + minuts.ToString() + " " + minutsString;
+                seconds = seconds - minutes * 60;
+
+                if (seconds == 0&&output!="")
+                {
+                    output = output + $" and ";
+
+                }
+               
+                else if (output!="")
+                {
+                    output = output + $", ";
+
+                }
+
+                output = output + $"{minutes} {minutesString}";
             }
             if (finalseconds > 0)
 
             {
-                output = output + "and" + finalseconds.ToString();
+                output = output + $" and { finalseconds} { secondsString}";
             }
-
             return output;
         }
-
     }
-}
 
+}
