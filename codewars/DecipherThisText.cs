@@ -33,14 +33,14 @@ namespace codewars
                 var tmpstring = Convert.ToChar(tmpNumber).ToString() + string.Join("", item.Where(x => char.IsLetter(x)).ToArray());
 
                 var pop = tmpstring.ToCharArray();
-                var pap = new char[] { tmpstring[tmpstring.Length - 1], tmpstring[1] };
+                var pap = new char[] {  tmpstring[1], tmpstring[tmpstring.Length - 1] };
 
-                pop[1] = 'F';
-                pop[pop.Length-1] = 'L';
+                pop[1] = pap[1];
+                pop[pop.Length-1] = pap[0];
 
 
 
-                wordsArray = wordsArray.Select(s => s.Replace(item, tmpstring)).ToArray();
+                wordsArray = wordsArray.Select(s => s.Replace(item, new string(pop))).ToArray();
             }
 
             
