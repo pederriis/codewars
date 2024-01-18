@@ -11,7 +11,12 @@ namespace codewars
 
         public static void Run()
         {
-            runReadableDuration();
+            runDecipherThis();
+        }
+
+        public static void runDecipherThis()
+        {
+            Console.WriteLine(DecipherThisText.DecipherThis("72olle 103doo 100ya"));
         }
        public static void CukooClock()
         {
