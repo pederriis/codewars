@@ -13,38 +13,34 @@ namespace codewars
     {
         public static string DecipherThis(string s)
         {
+            if (s=="")
+            {
+                return s;
+            }
             var wordsArray= s.Split(' ');
-
-            var number = Convert.ToInt32( string.Join("", wordsArray[0].Where(x => char.IsDigit(x)).ToArray()));
-
-            string stringAgain = Convert.ToChar(number).ToString();
-
-            var ArrayOfStringNumbers = string.Join("",wordsArray.Select(x => x.Where(x => char.IsDigit(x)).ToArray()));
-
-           string resultString = string.Concat(wordsArray[0].Where(Char.IsDigit));
-
-            string[] someName = new string[] { "First", "MiddleName", "LastName" };
-
-            var initials = string.Join(".", someName.Select(x => x.ToString().Concat(x.Where(char.IsDigit)).ToArray()));
+            List<string> output = new List<string>();    
 
             foreach (var item in wordsArray)
             {
-                var tmpNumber= Convert.ToInt32(string.Join("", item.Where(x => char.IsDigit(x)).ToArray()));
-                var tmpstring = Convert.ToChar(tmpNumber).ToString() + string.Join("", item.Where(x => char.IsLetter(x)).ToArray());
+                int tmpNumber = Convert.ToInt32(string.Join("", item.Where(x => char.IsDigit(x)).ToArray()));
+                string tmpstring = Convert.ToChar(tmpNumber).ToString() + string.Join("", item.Where(x => char.IsLetter(x)).ToArray());
 
-                var pop = tmpstring.ToCharArray();
-                var pap = new char[] {  tmpstring[1], tmpstring[tmpstring.Length - 1] };
+                char[] currentWord = tmpstring.ToCharArray();
 
-                pop[1] = pap[1];
-                pop[pop.Length-1] = pap[0];
+               if (currentWord.Length > 1)
+                
+                {
+                    char[] tempCharArray = new char[] {  tmpstring[1], tmpstring[tmpstring.Length - 1] };
+                    currentWord[1] = tempCharArray[1];
+                    currentWord[currentWord.Length-1] = tempCharArray[0];
 
+                }
 
+                   output.Add(new string(currentWord));
 
-                wordsArray = wordsArray.Select(s => s.Replace(item, new string(pop))).ToArray();
             }
-
             
-            return "pap"; // Implement me! :)
+            return string.Join(" ", output);
         }
     }
 }
