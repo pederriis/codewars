@@ -11,9 +11,12 @@ namespace codewars
 
         public static void Run()
         {
-            runDecipherThis();
+            runFirstNoneRepating();
         }
-
+        public static void runFirstNoneRepating()
+        {
+            Console.WriteLine(FirstNoneRepeating.FirstNonRepeatingLetter("AaBbC"));
+        }
         public static void runDecipherThis()
         {
             Console.WriteLine(DecipherThisText.DecipherThis("97 72eva 97 103o 97t 116sih 97dn 115ee 104wo 121uo 100o"));
